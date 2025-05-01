@@ -5,34 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>world</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1>go ds?</h1>
-    <img src="https://64.media.tumblr.com/6eeaf9834dcd3c1a1dddb98e0dd48a32/7a44704940fa5132-74/s500x750/d16e2dfd0dc053c834c0e427cd356871c41c4669.pnj"
-        alt="smile">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quidem corrupti corporis eaque obcaecati
-        veritatis ab explicabo reprehenderit, veniam doloribus odio sit maxime, perferendis repellat omnis impedit alias
-        quo ipsa!</p>
-    <a href="https://www.shecodes.io/athena/39607-how-to-add-emojis-on-a-website-using-html-and-css">MEGA LINK</a>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur earum consectetur vel accusamus nemo facere.
-        Et iste, tenetur culpa commodi unde natus placeat. In explicabo perspiciatis facere debitis ducimus accusantium.
-    </p>
-    <img src="./big house.png" alt="house">
+    <div class="video-wrapper">
+        <img src="./img/hero-video-img.png" alt="" class="video-thumbnail">
+        <button class="play-button" onclick="playVideo()">▶</button>
+        <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls style="display: none;" class="video" id="myVideo">
+            <source>
+        </video>
+    </div>
+    <script>
+        function playVideo() {
+            const video = document.getElementById('myVideo');
+            video.style.display = 'block';
+            video.play();
 
-    <section>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/yQl90GdB35k?si=s-T2nq5Cu1ahsAJa"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-
-    <section>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolor similique vitae saepe quibusdam,
-            facilis culpa veritatis perspiciatis, sunt dolores ex libero dolore eligendi maiores sapiente perferendis
-            cumque ad fugiat!</p>
-    </section>
+            document.querySelector('.video-thumbnail').style.display = 'none';
+            document.querySelector('.play-button').style.display = 'none';
+        }
+    </script>
 </body>
 
 </html>
